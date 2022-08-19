@@ -5,14 +5,26 @@
 	"main": "index.js",
 	"private": true,
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"commit": "node ./node_modules/cz-customizable/standalone.js",
 		"preinstall": "npx only-allow pnpm"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "MIT",
 	"devDependencies": {
-		"typescript": "^4.7.4",
-		"vue": "^3.2.36"
+		"@commitlint/cli": "^17.0.3",
+		"@commitlint/config-conventional": "^17.0.3",
+		"@typescript-eslint/eslint-plugin": "^5.33.1",
+		"@typescript-eslint/parser": "^5.33.1",
+		"commitlint-config-cz": "^0.13.3",
+		"cz-customizable": "^6.9.1",
+		"eslint": "^8.22.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"esno": "^0.16.3",
+		"husky": "^8.0.1",
+		"lint-staged": "^13.0.3",
+		"prettier": "^2.7.1",
+		"typescript": "^4.7.4"
 	}
 }
