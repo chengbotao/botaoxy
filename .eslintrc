@@ -9,7 +9,7 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "prettier/@typescript-eslint" // 禁用插件中与 Prettier 冲突的规则
+    // "prettier/@typescript-eslint" // 禁用插件中与 Prettier 冲突的规则
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
