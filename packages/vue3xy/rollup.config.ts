@@ -10,8 +10,8 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import alias from '@rollup/plugin-alias';
 import typescript from '@rollup/plugin-typescript';
-import Vue from 'unplugin-vue/rollup';
-import VueMacros from 'unplugin-vue-macros/rollup';
+import DefineOptions from 'unplugin-vue-define-options/rollup';
+import vue from 'rollup-plugin-vue';
 // import eslint from '@rollup/plugin-eslint';
 // import { babel } from '@rollup/plugin-babel';
 
@@ -22,15 +22,15 @@ const outputConf = {
 };
 
 export default {
-  input: './index.ts',
+  input: './src/index.ts',
   output: [
     {
-      file: resolve(__dirname, 'dist', 'billows.esm.js'),
+      file: resolve(__dirname, 'dist', 'vue3xy.esm.js'),
       format: 'esm',
       ...outputConf,
     },
     {
-      file: resolve(__dirname, 'dist', 'billows.js'),
+      file: resolve(__dirname, 'dist', 'vue3xy.js'),
       format: 'umd',
       name: 'vue3xy',
       ...outputConf,
@@ -46,12 +46,15 @@ export default {
       extensions: ['.ts', '.tsx', '.mjs', '.js', '.jsx', '.json', '.vue'],
     }),
     commonjs(),
-    VueMacros({
-      plugins: {
-        vue: Vue(),
+    json(),
+    // eslint(),
+    DefineOptions(),
+    typescript({
+      compilerOptions: {
+        resolveJsonModule: true,
+        allowSyntheticDefaultImports: true,
       },
     }),
-    typescript(),
-    json(),
+    vue(),
   ],
 };
