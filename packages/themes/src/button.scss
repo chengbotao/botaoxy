@@ -19,7 +19,7 @@
     cursor: pointer;
     transition: $btn-transition;
     &.disabled,
-    &[disabled="true"] {
+    &[disabled] {
       cursor: not-allowed;
       opacity: $btn-disabled-opacity;
       box-sizing: none;
