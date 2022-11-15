@@ -52,7 +52,9 @@ interface ButtonEmits {
 // })
 
 // Props 类型标注
-const props = withDefaults(defineProps<ButtonProps>(), {});
+const props = withDefaults(defineProps<ButtonProps>(), {
+    btnType: "default"
+});
 // Emit 类型标注
 const emits = defineEmits<ButtonEmits>();
 // 计算属性
