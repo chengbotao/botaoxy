@@ -17,6 +17,8 @@
   },
   "devDependencies": {
     "@algolia/client-search": "^4.14.2",
+    "@testing-library/dom": "^8.19.0",
+    "@testing-library/user-event": "^14.4.3",
     "@testing-library/vue": "^6.6.1",
     "@vitejs/plugin-vue": "^3.1.0",
     "@vue/compiler-sfc": "^3.2.45",

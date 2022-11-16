@@ -84,6 +84,8 @@ importers:
   packages/vue3xy:
     specifiers:
       '@algolia/client-search': ^4.14.2
+      '@testing-library/dom': ^8.19.0
+      '@testing-library/user-event': ^14.4.3
       '@testing-library/vue': ^6.6.1
       '@vitejs/plugin-vue': ^3.1.0
       '@vue/compiler-sfc': ^3.2.45
@@ -99,6 +101,8 @@ importers:
       vue: 3.2.40
     devDependencies:
       '@algolia/client-search': 4.14.2
+      '@testing-library/dom': 8.19.0
+      '@testing-library/user-event': 14.4.3_aaq3sbffpfe3jnxzm2zngsddei
       '@testing-library/vue': 6.6.1_ek75d3noihdfv6qzog663yntom
       '@vitejs/plugin-vue': 3.1.2_vite@3.1.7+vue@3.2.40
       '@vue/compiler-sfc': 3.2.45
@@ -1361,6 +1365,15 @@ packages:
       '@types/react-dom': 18.0.6
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+    dev: true
+
+  /@testing-library/user-event/14.4.3_aaq3sbffpfe3jnxzm2zngsddei:
+    resolution: {integrity: sha512-kCUc5MEwaEMakkO5x7aoD+DLi02ehmEM2QCGWvNqAS1dV/fAvORWEjnjsEIvml59M7Y5kCkWN6fCCyPOe8OL6Q==}
+    engines: {node: '>=12', npm: '>=6'}
+    peerDependencies:
+      '@testing-library/dom': '>=7.21.4'
+    dependencies:
+      '@testing-library/dom': 8.19.0
     dev: true
 
   /@testing-library/vue/6.6.1_ek75d3noihdfv6qzog663yntom:
