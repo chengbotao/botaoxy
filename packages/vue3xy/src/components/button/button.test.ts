@@ -1,4 +1,4 @@
-import { render, cleanup } from '@testing-library/vue'
+import { render } from '@testing-library/vue'
 import userEvent from '@testing-library/user-event'
 import Button from "./index";
 describe('Button Component', () => {
