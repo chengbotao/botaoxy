@@ -9,8 +9,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas);
 
 describe('Button Component', () => {
-  // 应呈现正确的默认按钮
-  test('should render the correct default button', async () => {
+  test('should render the correct icon', async () => {
     const { getByTestId } = render(Icon, {
       props: {
         icon: 'coffee',
