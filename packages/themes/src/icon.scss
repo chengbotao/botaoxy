@@ -1,0 +1,5 @@
+@each $key, $val in $theme-colors {
+    .xy-icon-#{$key} {
+      color: $val;
+    }
+  }
