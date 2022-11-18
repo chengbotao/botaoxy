@@ -11,12 +11,15 @@ library.add(fas);
 describe('Button Component', () => {
   // 应呈现正确的默认按钮
   test('should render the correct default button', async () => {
-    const { getByText } = render(Icon, {
+    const { getByTestId } = render(Icon, {
       props: {
         icon: 'coffee',
       },
+      attrs: {
+        'data-testid': 'xyicon',
+      },
     });
-    const element = getByText('Default Button');
-    expect(element.className).toBe('xy-icon');
+    const element = getByTestId('xyicon');
+    expect(element.className).toContain('xy-icon');
   });
 });

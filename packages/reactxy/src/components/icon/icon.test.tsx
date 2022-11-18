@@ -14,8 +14,8 @@ describe('Icon Component', () => {
     const defaultProps: IconProps = {
       icon: 'coffee',
     };
-    const wrapper = render(<Icon id="icon" {...defaultProps}></Icon>);
-    const element = wrapper.getAllByTestId('icon');
+    const wrapper = render(<Icon data-testid='xyicon' {...defaultProps}></Icon>);
+    const element = wrapper.getByTestId("xyicon");
     expect(element).toBeInTheDocument();
     expect(element).toHaveClass('xy-icon');
   });
