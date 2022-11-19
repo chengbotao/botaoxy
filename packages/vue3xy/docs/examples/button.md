@@ -8,6 +8,7 @@
 import {ref} from "vue"
 const num = ref(0)
 const handleClick = (event)=>{
+    console.log(event)
     num.value++
 }
 </script>
@@ -27,7 +28,8 @@ const handleClick = (event)=>{
 <script setup lang="ts">
 import {ref} from "vue"
 const num = ref(0)
-const handleClick = (event)=>{
+const handleClick = (event) => {
+    
     num.value++
 }
 </script>

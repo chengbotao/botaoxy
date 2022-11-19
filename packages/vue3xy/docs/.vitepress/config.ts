@@ -24,6 +24,10 @@ export default {
             text: "Button<按钮>",
             link: "/examples/button",
           },
+          {
+            text: "Input<输入框>",
+            link: "/examples/input",
+          },
         ],
       }],
     },

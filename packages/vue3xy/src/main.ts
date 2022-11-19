@@ -5,8 +5,9 @@
 import { App } from 'vue';
 import XyButton from './components/button/index';
 import XyIcon from './components/icon/index';
+import xyInput from './components/input/index';
 
-const components: any[] = [XyButton, XyIcon];
+const components: any[] = [XyButton, XyIcon, xyInput];
 
 const install = (Vue: App) => {
   components.forEach((component) => {

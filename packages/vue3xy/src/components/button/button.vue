@@ -38,7 +38,7 @@ interface ButtonProps {
 }
 
 interface ButtonEmits {
-    (event: "click", payload: MouseEvent): void
+    (event: "click", payload: PointerEvent): void
 }
 
 // defineOptions({
@@ -68,7 +68,7 @@ const isLink = computed(() => {
 })
 
 // methods
-const handleClick = (event: MouseEvent) => {
+const handleClick = (event: PointerEvent) => {
     emits("click", event)
 }
 
