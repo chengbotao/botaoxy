@@ -6,7 +6,7 @@
     <button v-if="!isLink" key="button" v-bind="$attrs" :disabled="disabled" :class="classes" @click="handleClick">
         <slot></slot>
     </button>
-    <a v-else key="a" v-bind="$attrs" :href="href" :disabled="disabled" :class="classes" @click="handleClick">
+    <a v-else key="a" v-bind="$attrs" :href="href" :class="classes" @click="handleClick">
         <slot></slot>
     </a>
 </template>
@@ -25,16 +25,10 @@ export default defineComponent({
 import { computed } from "vue";
 import classNames from "classnames";
 
-enum ButtonSize {
-    Large = "lg",
-    Small = "sm",
-}
-enum ButtonType {
-    Primary = "primary",
-    Default = "default",
-    Danger = "danger",
-    Link = "link",
-}
+type ButtonSize = "lg" | "sm";
+
+type ButtonType = "primary" | "default" | "danger" | "link";
+
 interface ButtonProps {
     disabled?: boolean
     href?: string
@@ -42,6 +36,7 @@ interface ButtonProps {
     size?: ButtonSize
     btnType?: ButtonType
 }
+
 interface ButtonEmits {
     (event: "click", payload: MouseEvent): void
 }
@@ -51,26 +46,33 @@ interface ButtonEmits {
 //     inheritAttrs: false,
 // })
 
-// Props 类型标注
+// Props
 const props = withDefaults(defineProps<ButtonProps>(), {
     btnType: "default"
 });
-// Emit 类型标注
+
+// Emits
 const emits = defineEmits<ButtonEmits>();
-// 计算属性
+
+// computed
 const classes = computed(() => {
     return classNames("xy-button", props.className, {
         [`xy-button-${props.btnType}`]: props.btnType,
         [`xy-button-${props.size}`]: props.size,
-        disabled: props.btnType === ButtonType.Link && props.disabled,
+        disabled: props.btnType === "link" && props.disabled,
     });
-})
+});
+
 const isLink = computed(() => {
-    return props.btnType === ButtonType.Link && !!props.href;
+    return props.btnType === "link" && !!props.href;
 })
+
+// methods
 const handleClick = (event: MouseEvent) => {
     emits("click", event)
 }
+
 // public 方法
 defineExpose({})
+
 </script>

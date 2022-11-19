@@ -4,7 +4,33 @@
  */
 
 export default {
-    title: 'VitePress',
-    description: 'Just playing around.'
+  title: 'Vue3xy',
+  description: 'Vue3 UI library',
+  lastUpdated: false,
+  appearance: false,
+  themeConfig: {
+    socialLinks:[
+      {icon: "github", link: "https://github.com/chengbotao"}
+    ],
+    sidebar: {
+      "/examples/": [{
+        text: "基础组件",
+        items: [
+          {
+            text: "Icon<图标>",
+            link: "/examples/Icon",
+          },
+          {
+            text: "Button<按钮>",
+            link: "/examples/button",
+          },
+        ],
+      }],
+    },
+    docFooter: {
+      prev: '上一个组件',
+      next: '下一个组件'
+    }
   }
-  
+
+}

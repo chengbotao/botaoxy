@@ -4,11 +4,13 @@
  */
 import { render } from '@testing-library/vue';
 import Icon from './index';
+
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas);
 
-describe('Button Component', () => {
+describe('Icon Component', () => {
+  // 应呈现正确的 icon 组件
   test('should render the correct icon', async () => {
     const { getByTestId } = render(Icon, {
       props: {
@@ -18,7 +20,9 @@ describe('Button Component', () => {
         'data-testid': 'xyicon',
       },
     });
+
     const element = getByTestId('xyicon');
-    expect(element.className).toContain('xy-icon');
+
+    expect(element.className).toMatch(/xy-icon/);
   });
 });

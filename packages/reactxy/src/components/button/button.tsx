@@ -24,18 +24,18 @@ export interface ButtonProps
 
 /**
  * Button 组件
- * 
- *  
+ *
+ *
  */
 export const Button: FC<ButtonProps> = (props) => {
   const { btnType, disabled, className, size, href, children, ...restProps } = props;
   const classes = classNames('xy-button', className, {
     [`xy-button-${btnType}`]: btnType,
     [`xy-button-${size}`]: size,
-    disabled: btnType === "link" && disabled,
+    disabled: btnType === 'link' && disabled,
   });
 
-  if (btnType === "link" && href) {
+  if (btnType === 'link' && href) {
     return (
       <a className={classes} href={href} {...restProps}>
         {children}
@@ -52,7 +52,7 @@ export const Button: FC<ButtonProps> = (props) => {
 
 Button.defaultProps = {
   disabled: false,
-  btnType: "default",
+  btnType: 'default',
 };
 
 export default Button;

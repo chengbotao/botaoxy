@@ -3,7 +3,7 @@
  * @Date: 2022-11-17 23:16:43
 -->
 <template>
-    <FontAwesomeIcon v-bind="$attrs" :class="classes"></FontAwesomeIcon>
+    <FontAwesomeIcon v-bind="$attrs" :icon="icon" :class="classes"></FontAwesomeIcon>
 </template>
 
 <script lang="ts">
@@ -20,6 +20,7 @@ export default defineComponent({
 <script setup lang="ts">
 import { computed } from "vue";
 import classNames from "classnames";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon, FontAwesomeIconProps } from "@fortawesome/vue-fontawesome";
 
 type ThemeProps =
@@ -32,14 +33,18 @@ type ThemeProps =
     | 'light'
     | 'dark';
 
-interface IconProps extends FontAwesomeIconProps {
+interface IconProps extends Omit<FontAwesomeIconProps, "icon"> {
+    icon: object | Array<string> | string | IconDefinition
     className?: string
     theme?: ThemeProps
 }
 
+// Props
 const props = withDefaults(defineProps<IconProps>(), {
+    theme: "primary"
 });
 
+// computed
 const classes = computed(() => {
     return classNames("xy-icon", props.className, {
         [`xy-icon-${props.theme}`]: props.theme,
