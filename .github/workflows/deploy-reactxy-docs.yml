@@ -1,5 +1,5 @@
 
-name: vue3xy-docs
+name: reactxy-docs
 
 on:
   push:
@@ -36,14 +36,15 @@ jobs:
       - name: 构建文档
         env:
           NODE_OPTIONS: --max_old_space_size=4096
-        run: pnpm vue3xy:docs:build
+        run: pnpm reactxy:docs:build
 
       - name: 部署文档
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           # 这是文档部署到的分支名称
-          folder: packages/vue3xy/docs/.vitepress/dist
+          folder: packages/reactxy/storybook-static
           token: ${{secrets.BOTAOXY_DOCS}}
-          repository-name: chengbotao/vue3xy
+          # ssh-key: ${{ secrets.BOTAOXY_DOCS }}
+          repository-name: chengbotao/reactxy
           branch: main
 

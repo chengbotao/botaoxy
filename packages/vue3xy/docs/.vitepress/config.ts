@@ -4,6 +4,7 @@
  */
 
 export default {
+  base: "/vue3xy/",
   title: 'Vue3xy',
   description: 'Vue3 UI library',
   lastUpdated: false,
