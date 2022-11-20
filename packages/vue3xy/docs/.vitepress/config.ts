@@ -18,7 +18,7 @@ export default {
         items: [
           {
             text: "Icon<图标>",
-            link: "/examples/Icon",
+            link: "/examples/icon",
           },
           {
             text: "Button<按钮>",

@@ -5,6 +5,10 @@
 	"main": "index.js",
 	"private": true,
 	"scripts": {
+		"reactxy:docs:build": "pnpm -C ./packages/reactxy build-storybook",
+		"reactxy:docs:dev": "pnpm -C ./packages/reactxy storybook",
+		"vue3xy:docs:build": "pnpm -C ./packages/vue3xy docs:build",
+		"vue3xy:docs:dev": "pnpm -C ./packages/vue3xy docs:dev",
 		"commit": "node ./node_modules/cz-customizable/standalone.js",
 		"preinstall": "npx only-allow pnpm"
 	},

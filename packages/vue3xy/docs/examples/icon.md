@@ -1,6 +1,7 @@
 # Icon
 
-> 基于 `Font Awesome` 免费图标二次封装
+> 基于 `Font Awesome` 免费图标二次封装  
+> [Font Awesome | free](https://fontawesome.com/search?o=r&m=free)
 
 ## 基础用法
 

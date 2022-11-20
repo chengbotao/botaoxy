@@ -43,7 +43,7 @@ interface InputProps {
 }
 
 interface InputEmits {
-    (event: "input", payload: InputEvent): void
+    (event: "input", payload: Event): void
     (event: "focus", payload: FocusEvent): void
     (event: "blur", payload: FocusEvent): void
     (event: "change", payload: Event): void
@@ -70,7 +70,7 @@ const classes = classNames('xy-input-wrapper', props.className, {
 });
 
 // methods
-const handleInput = (event: InputEvent) => {
+const handleInput = (event: Event) => {
     emits("input", event)
     emits("update:modelValue", (event.target as HTMLInputElement).value)
 }
