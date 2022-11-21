@@ -9,30 +9,30 @@ import { action } from '@storybook/addon-actions';
 import Button from './button';
 
 const defaultButton = () => (
-  <>
+  <div>
     <Button onClick={action('clicked')}>default button</Button>
-  </>
+  </div>
 );
 const buttonWithSize = () => (
-  <>
+  <div>
     <Button size="lg">large button</Button>
     <Button size="sm">small button</Button>
-  </>
+  </div>
 );
 const buttonWithType = () => (
-  <>
+  <div>
     <Button btnType="danger"> danger button</Button>
     <Button btnType="link">link button</Button>
     <Button btnType="primary">primary button</Button>
-  </>
+  </div>
 );
 const buttonWithDisabled = () => (
-  <>
+  <div>
     <Button disabled>default button</Button>
     <Button btnType="link" disabled>
       link button
     </Button>
-  </>
+  </div>
 );
 
 storiesOf('Button<按钮>', module)

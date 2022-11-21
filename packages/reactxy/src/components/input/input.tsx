@@ -40,11 +40,11 @@ export const Input: FC<InputProps> = (props) => {
   });
 
   // 受控组件 || 非受控组件
-  const fixControlledValue = (value: any) => {
+  const fixControlledValue = (value: unknown) => {
     if (typeof value === 'undefined' || value === null) {
       return '';
     }
-    return value;
+    return value as string;
   };
   if ('value' in props) {
     delete restProps.defaultValue;

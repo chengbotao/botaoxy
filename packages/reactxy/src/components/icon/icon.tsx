@@ -40,4 +40,8 @@ export const Icon: FC<IconProps> = (props) => {
   return <FontAwesomeIcon className={classes} {...restProps}></FontAwesomeIcon>;
 };
 
+Icon.defaultProps = {
+  theme: 'primary',
+};
+
 export default Icon;

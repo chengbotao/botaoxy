@@ -25,4 +25,21 @@ describe('Icon Component', () => {
 
     expect(element.className).toMatch(/xy-icon/);
   });
+
+  // 应该根据不同的props渲染正确的组件
+  test('should render the correct icon based on different props', async () => {
+    const { getByTestId } = render(Icon, {
+      props: {
+        icon: 'coffee',
+        theme: 'success',
+      },
+      attrs: {
+        'data-testid': 'xyicon',
+      },
+    });
+
+    const element = getByTestId('xyicon');
+
+    expect(element.className).toMatch(/xy-icon-success/);
+  });
 });

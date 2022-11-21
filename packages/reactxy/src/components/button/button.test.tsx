@@ -25,8 +25,8 @@ describe('Button Component', () => {
   // 应该根据不同的props渲染正确的组件
   test('should render the correct component based on different props', () => {
     const differentProps: ButtonProps = {
-      btnType: "primary",
-      size: "lg",
+      btnType: 'primary',
+      size: 'lg',
       className: 'xy-custom-btn',
     };
     const wrapper = render(<Button {...differentProps}>Primary Button</Button>);
@@ -38,7 +38,7 @@ describe('Button Component', () => {
   // 当 btnType 等于 link 并提供 href 时，应该呈现一个 A 标签
   test('should render a link when btnType equals link and href is provided', () => {
     const linkandhrefProps: ButtonProps = {
-      btnType: "link",
+      btnType: 'link',
       href: '#',
     };
     const wrapper = render(<Button {...linkandhrefProps}>Link Button</Button>);

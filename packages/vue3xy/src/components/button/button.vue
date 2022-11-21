@@ -26,7 +26,6 @@ import { computed } from "vue";
 import classNames from "classnames";
 
 type ButtonSize = "lg" | "sm";
-
 type ButtonType = "primary" | "default" | "danger" | "link";
 
 interface ButtonProps {
@@ -38,7 +37,7 @@ interface ButtonProps {
 }
 
 interface ButtonEmits {
-    (event: "click", payload: PointerEvent): void
+    (event: "click", payload: MouseEvent): void
 }
 
 // defineOptions({
@@ -68,7 +67,7 @@ const isLink = computed(() => {
 })
 
 // methods
-const handleClick = (event: PointerEvent) => {
+const handleClick = (event: MouseEvent) => {
     emits("click", event)
 }
 

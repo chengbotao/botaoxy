@@ -7,6 +7,7 @@ import classNames from 'classnames';
 
 export type ButtonSize = 'lg' | 'sm';
 export type ButtonType = 'primary' | 'default' | 'danger' | 'link';
+
 export interface ButtonProps
   extends Partial<ButtonHTMLAttributes<HTMLElement> & AnchorHTMLAttributes<HTMLElement>> {
   /** 设置 Button 禁用 */

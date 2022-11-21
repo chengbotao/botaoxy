@@ -5,6 +5,7 @@
 import { render } from '@testing-library/vue';
 import userEvent from '@testing-library/user-event';
 import Button from './index';
+
 describe('Button Component', () => {
   // 应呈现正确的默认按钮
   test('should render the correct default button', async () => {

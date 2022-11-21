@@ -7,8 +7,10 @@
 	"scripts": {
 		"reactxy:docs:build": "pnpm -C ./packages/reactxy build-storybook",
 		"reactxy:docs:dev": "pnpm -C ./packages/reactxy storybook",
+		"reactxy:test": "pnpm -C ./packages/reactxy test",
 		"vue3xy:docs:build": "pnpm -C ./packages/vue3xy docs:build",
 		"vue3xy:docs:dev": "pnpm -C ./packages/vue3xy docs:dev",
+		"vue3xy:test": "pnpm -C ./packages/vue3xy test",
 		"commit": "node ./node_modules/cz-customizable/standalone.js",
 		"preinstall": "npx only-allow pnpm"
 	},
