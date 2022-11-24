@@ -29,6 +29,10 @@ export default {
             text: "Input<输入框>",
             link: "/examples/input",
           },
+          {
+            text: "AutoComplete<补全输入框>",
+            link: "/examples/autoComplete",
+          },
         ],
       }],
     },
